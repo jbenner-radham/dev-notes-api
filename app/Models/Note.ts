@@ -6,6 +6,12 @@ export default class Note extends BaseModel {
   public id: number
 
   @column()
+  public name: string
+
+  @column()
+  public description: string
+
+  @column()
   public source: string
 
   @column.dateTime({ autoCreate: true })

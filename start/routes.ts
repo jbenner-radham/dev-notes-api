@@ -44,4 +44,8 @@ Route.post('/logout', async ({ auth }) => {
   }
 })
 
+Route.resource('/notes', 'NotesController').middleware({
+  '*': ['auth']
+})
+
 Route.resource('/users', 'UsersController')
