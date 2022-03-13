@@ -5,6 +5,9 @@ export default class Note extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
+  @column()
+  public source: string
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 
